@@ -12,7 +12,9 @@
 이후의 서술은 스레드를 생성하는 순간 자식 스레드의 스택은 비어있는 상태라 가정하고 진행하겠음
 (스레드 생성 당시 파라미터 등으로 부모 스레드의 객체 등의 접근 방법을 지원하지 않으면 접근 불가)
 
-
+Chat Server: 채팅 서버 실행 클래스, ServerSocket을 생성하고 500001에 바인딩, ChatClient 연결 수락 후 SocketClient 생성</br>
+SocketClient: ChatClient와 1:1 통신 </br>
+ChatClient: 채팅 클라이언트 실행 클래스, ChatServer에 연결 요청, SocketClient와 1:1 통신 </br>
 해당 TCP-CHAT 프로젝트는 'ChatServer'를 열어 다수의 'ChatClient'들이 상호소통이 가능하게 하는 프로젝트 이다.
 스레드 풀을 100으로 제한하고, 입장한 'ChatServer'를 HashMap으로 관리한다.
 
