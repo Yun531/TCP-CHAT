@@ -22,7 +22,7 @@
 
 (SocketClient.java파일의 21번 줄에서 SocketClient() 생성자가 호출된다)</br>
 **질문 2)** 
-SocketClient.java 파일의 생성자(15~28)과 receive()(30~56)을 보면
+SocketClient.java 파일의 생성자(15-28)과 receive()(30-56)을 보면
 31번 줄에서 새로운 스레드를 생성한 뒤, 스레드 풀에 넘겨서 스레드 처리를 하는것을 확인할 수 있다.
 
 24번 줄에서  receive()를 호출하기 전에는 기존 스레드에서 'SocketClient'객체를 생성하다가, receive()가 호출되면서 백지 상태(스레드 스택에 아무것도 들어가 있지 않은)의 새로운 스레드가 생성되는것으로 이해했다.
